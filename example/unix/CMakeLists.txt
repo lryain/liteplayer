@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 project(liteplayer_demo)
 
 MESSAGE(STATUS "Platform: ${CMAKE_SYSTEM_NAME}")
@@ -173,8 +173,10 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
     target_link_libraries(tts_demo asound)
 endif()
 
-file(COPY
-    ${CMAKE_SOURCE_DIR}/test.mp3
-    ${CMAKE_SOURCE_DIR}/test.m4a
-    DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
-)
+# Optional: copy test files if they exist
+if(EXISTS ${CMAKE_SOURCE_DIR}/test.mp3)
+    file(COPY ${CMAKE_SOURCE_DIR}/test.mp3 DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+endif()
+if(EXISTS ${CMAKE_SOURCE_DIR}/test.m4a)
+    file(COPY ${CMAKE_SOURCE_DIR}/test.m4a DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+endif()

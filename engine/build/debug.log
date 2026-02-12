@@ -1,0 +1,9 @@
+========================================
+  Music Player Server
+  Phase 4 - ZMQ Remote Control
+========================================
+
+[Server] Using config file: config/music_player.yaml
+[ConfigLoader] Failed to open config file: config/music_player.yaml
+[MusicPlayerService] Failed to load config
+[Server] Failed to initialize service

@@ -1,0 +1,72 @@
+# MusicPlayerEngine Configuration
+
+# ZMQ 配置
+zmq:
+  command_endpoint: "ipc:///tmp/music_player_cmd.sock"
+  event_endpoint: "ipc:///tmp/music_player_event.sock"
+  
+# 音乐库配置
+library:
+  # 数据库配置
+  database:
+    # 数据库文件路径（支持绝对路径和相对路径）
+    # path: "/home/pi/.local/share/music-player/music_library.db"
+    path: "data/music_library.db"
+    # 备用数据库路径（用于测试）
+    test_path: "/tmp/test_music.db"
+    # 数据库备份目录
+    backup_dir: "data/backups"
+    # 自动备份
+    auto_backup:
+      enabled: true
+      interval_days: 7
+      max_backups: 5
+  
+  # 音乐扫描目录
+  scan_directories:
+    - "/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal"
+    - "/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music"
+    
+  # 文件格式支持
+  supported_formats: ["mp3", "m4a", "aac", "wav"]
+  
+  # 自动扫描
+  auto_scan:
+    enabled: true
+    interval_seconds: 3600
+    watch_directories: true
+    
+# 播放器配置
+player:
+  default_play_mode: "sequential"
+  
+  audio_output:
+    device: "default"
+    buffer_size: 4096
+    
+  progress_update_interval: 1000
+  preload_next_track: true
+  
+# 推荐引擎配置
+recommendation:
+  enabled: true
+  history_retention_days: 90
+  
+  algorithm:
+    weight_play_count: 0.3
+    weight_recent: 0.4
+    weight_similar_tags: 0.3
+    
+# 日志配置
+logging:
+  level: "info"
+  file: "logs/music_player.log"
+  max_size_mb: 100
+  max_files: 5
+  
+# 服务配置
+service:
+  name: "music-player"
+  pid_file: "/var/run/music-player.pid"
+  user: "pi"
+  group: "pi"

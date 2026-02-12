@@ -1,0 +1,441 @@
+nohup: ignoring input
+========================================
+  Music Player Server
+  Phase 4 - ZMQ Remote Control
+========================================
+
+[Server] Using config file: config/music_player.yaml
+[ConfigLoader] Database path: data/music_library.db -> /home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/data/music_library.db
+[ConfigLoader] Configuration loaded successfully
+[MusicPlayerService] ZMQ initialized
+  Command endpoint: ipc:///tmp/music_player_cmd.sock
+  Event endpoint: ipc:///tmp/music_player_event.sock
+[MusicLibrary] Database opened: /home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/data/music_library.db
+[LitePlayerWrapper] Initialized successfully
+[PlaybackController] Initialized successfully
+[MusicPlayerService] Scanning music directories...
+[MusicPlayerService] Scanning directory: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal
+[0;34m2026-02-12 13:27:17:682 D mlooper: [ael-listplayer]: Entry looper thread: thread_id=[0x7f98a5cf40]
+[0m  Found 32 tracks
+[MusicLibrary] Added track: sheep (ID: 1)
+[MusicLibrary] Added track: pig (ID: 2)
+[MusicLibrary] Added track: kookaburra (ID: 3)
+[MusicLibrary] Added track: elephant (ID: 4)
+[MusicLibrary] Added track: zebra (ID: 5)
+[MusicLibrary] Added track: cow (ID: 6)
+[MusicLibrary] Added track: leopard (ID: 7)
+[MusicLibrary] Added track: dog (ID: 8)
+[MusicLibrary] Added track: budgie_chirps1 (ID: 9)
+[MusicLibrary] Added track: cat (ID: 10)
+[MusicLibrary] Added track: whale (ID: 11)
+[MusicLibrary] Added track: budgie_chirps2 (ID: 12)
+[MusicLibrary] Added track: goose (ID: 13)
+[MusicLibrary] Added track: bird (ID: 14)
+[MusicLibrary] Added track: coyote (ID: 15)
+[MusicLibrary] Added track: crow (ID: 16)
+[MusicLibrary] Added track: bear (ID: 17)
+[MusicLibrary] Added track: tiger (ID: 18)
+[MusicLibrary] Added track: snake (ID: 19)
+[MusicLibrary] Added track: frog (ID: 20)
+[MusicLibrary] Added track: chimpanzee (ID: 21)
+[MusicLibrary] Added track: rooster (ID: 22)
+[MusicLibrary] Added track: owl (ID: 23)
+[MusicLibrary] Added track: wolf (ID: 24)
+[MusicLibrary] Added track: lion (ID: 25)
+[MusicLibrary] Added track: donkey (ID: 26)
+[MusicLibrary] Added track: chicken (ID: 27)
+[MusicLibrary] Added track: horse (ID: 28)
+[MusicLibrary] Added track: duck (ID: 29)
+[MusicLibrary] Added track: dolphin (ID: 30)
+[MusicLibrary] Added track: gibbon (ID: 31)
+[MusicLibrary] Added track: bee (ID: 32)
+[MusicLibrary] Added 32/32 tracks
+  Added 32 new tracks to database
+[MusicPlayerService] Scanning directory: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music
+  Found 12 tracks
+[MusicLibrary] Added track: exercise (ID: 33)
+[MusicLibrary] Added track: classic (ID: 34)
+[MusicLibrary] Added track: birthday (ID: 35)
+[MusicLibrary] Added track: nature (ID: 36)
+[MusicLibrary] Added track: ballad (ID: 37)
+[MusicLibrary] Added track: salsa (ID: 38)
+[MusicLibrary] Added track: huangmeixi (ID: 39)
+[MusicLibrary] Added track: AlanWalker-Faded (ID: 40)
+[MusicLibrary] Added track: rock (ID: 41)
+[MusicLibrary] Added track: trot (ID: 42)
+[MusicLibrary] Added track: nature-60s (ID: 43)
+[MusicLibrary] Added track: funk (ID: 44)
+[MusicLibrary] Added 12/12 tracks
+  Added 12 new tracks to database
+[MusicPlayerService] Scan complete: 44 tracks added
+[MusicPlayerService] Syncing 44 tracks from database to playlist...
+  ✓ Added: AlanWalker-Faded (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3)
+  ✓ Added: ballad (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3)
+  ✓ Added: bear (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav)
+  ✓ Added: bee (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav)
+  ✓ Added: bird (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav)
+  ✓ Added: birthday (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav)
+  ✓ Added: budgie_chirps1 (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps1.wav)
+  ✓ Added: budgie_chirps2 (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps2.wav)
+  ✓ Added: cat (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cat.wav)
+  ✓ Added: chicken (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chicken.wav)
+  ✓ Added: chimpanzee (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chimpanzee.wav)
+  ✓ Added: classic (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/classic.mp3)
+  ✓ Added: cow (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cow.wav)
+  ✓ Added: coyote (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/coyote.wav)
+  ✓ Added: crow (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/crow.wav)
+  ✓ Added: dog (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dog.wav)
+  ✓ Added: dolphin (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dolphin.wav)
+  ✓ Added: donkey (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/donkey.wav)
+  ✓ Added: duck (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/duck.wav)
+  ✓ Added: elephant (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/elephant.wav)
+  ✓ Added: exercise (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/exercise.mp3)
+  ✓ Added: frog (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/frog.wav)
+  ✓ Added: funk (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/funk.mp3)
+  ✓ Added: gibbon (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/gibbon.wav)
+  ✓ Added: goose (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/goose.wav)
+  ✓ Added: horse (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/horse.wav)
+  ✓ Added: huangmeixi (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/huangmeixi.mp3)
+  ✓ Added: kookaburra (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/kookaburra.wav)
+  ✓ Added: leopard (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/leopard.wav)
+  ✓ Added: lion (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/lion.wav)
+  ✓ Added: nature (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature.mp3)
+  ✓ Added: nature-60s (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature-60s.mp3)
+  ✓ Added: owl (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/owl.wav)
+  ✓ Added: pig (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/pig.wav)
+  ✓ Added: rock (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/rock.mp3)
+  ✓ Added: rooster (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/rooster.wav)
+  ✓ Added: salsa (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/salsa.wav)
+  ✓ Added: sheep (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/sheep.wav)
+  ✓ Added: snake (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/snake.wav)
+  ✓ Added: tiger (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/tiger.wav)
+  ✓ Added: trot (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/trot.mp3)
+  ✓ Added: whale (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/whale.wav)
+  ✓ Added: wolf (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/wolf.wav)
+  ✓ Added: zebra (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/zebra.wav)
+[MusicPlayerService] Playlist now has 44 tracks
+[MusicPlayerService] Service initialized successfully
+[MusicPlayerService] Command loop started
+[MusicPlayerService] Service started
+[Server] Service is running. Press Ctrl+C to stop.
+
+[MusicPlayerService] Event loop started
+[MusicPlayerService] Received command: get_status
+[MusicPlayerService] 📊 Status: stopped (pos: 0ms)
+[MusicPlayerService] Sending response for: get_status
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: add_track
+[MusicLibrary] Added track: Dog Sound (ID: 45)
+[MusicPlayerService] ➕ Added track: Dog Sound (/home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/../../assets/sounds/animal/dog.wav)
+[MusicPlayerService] Sending response for: add_track
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: get_track
+[MusicPlayerService] Sending response for: get_track
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: get_all_tracks
+[MusicPlayerService] Sending response for: get_all_tracks
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: search_tracks
+[MusicPlayerService] Sending response for: search_tracks
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController] Starting track: AlanWalker-Faded (1/45)
+[PlaybackController] Resetting player
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] File loaded, giving player time to prepare
+[0;32m2026-02-12 13:27:32:601 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[0m[0;34m2026-02-12 13:27:32:601 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController] State: 0 -> 1
+[0;32m2026-02-12 13:27:32:601 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 13:27:32:601 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3, content_pos:0
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor: channels=2, sample_rate=44100, bit_rate=128, frame_size=417
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor: MP3 INFO:
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor:   >channels          : 2
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor:   >sample_rate       : 44100
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor:   >bit_rate          : 128
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor:   >frame_size        : 417
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]mp3_extractor:   >frame_start_offset: 1100
+[0m[0;32m2026-02-12 13:27:32:602 I [liteplayer]parser: MediaInfo: codec_type[2], samplerate[44100], channels[2], bits[16], pos[1100], len[1067730], duration[66664ms]
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 948 bytes in ringbuf
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 13:27:32:602 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController] State: 1 -> 1
+[PlaybackController] Starting playback
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] Playback started successfully
+[MusicPlayerService] ▶️  Playing: "[0;32m2026-02-12 13:27:33:102 I [liteplayer]core: Starting player[file]
+[0mAlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[0;34m2026-02-12 13:27:33:102 D [liteplayer]audio_element: [mp3_decoder] opening input reader
+[0m[0;34m2026-02-12 13:27:33:102 D [liteplayer]audio_element: [mp3_decoder] opening output writer
+[0m[MusicPlayerService] Response sent
+[0;34m2026-02-12 13:27:33:102 D [liteplayer]audio_element: [mp3_decoder] el opened
+[0m[0;34m2026-02-12 13:27:33:102 D [liteplayer]core: [ file-mp3_decoder ] Receive started event
+[0m[0;34m2026-02-12 13:27:33:102 D [liteplayer]audio_element: [mp3_decoder] Element resumed
+[0m[PlaybackController] State: 1 -> 2
+[0;32m2026-02-12 13:27:33:102 I [liteplayer]core: [ file-mp3_decoder ] Receive codec info: samplerate=44100, ch=2, bits=16
+[0m[0;32m2026-02-12 13:27:33:102 I [liteplayer]core: Opening sink: rate:44100, channels:2, bits:16
+[0m[0;34m2026-02-12 13:27:33:102 D [liteplayer]alsa: Opening alsa: samplerate=44100, channels=2, bits=16
+[0mPlug PCM: Rate conversion PCM (48000, sformat=S16_LE)
+Converter: libsamplerate
+Protocol version: 10002
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 44100
+  exact rate   : 44100 (44100/1)
+  msbits       : 16
+  buffer_size  : 16537
+  period_size  : 5512
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 5512
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 16537
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 4654751689864118272
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 688530160
+[MusicPlayerService] Received command: pause
+[PlaybackController] Paused
+[MusicPlayerService] ⏸️  Paused at 5262ms
+[0;32m2026-02-12 13:27:38:115 I [liteplayer]core: Pausing player[file]
+[0m[MusicPlayerService] Sending response for: pause
+[MusicPlayerService] Response sent
+[0;34m2026-02-12 13:27:38:132 D [liteplayer]audio_element: [mp3_decoder] closing output writer
+[0m[0;32m2026-02-12 13:27:38:132 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 13:27:38:132 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 13:27:38:507 D [liteplayer]audio_element: [mp3_decoder] closing input reader
+[0m[0;34m2026-02-12 13:27:38:507 D [liteplayer]audio_element: [mp3_decoder] closed
+[0m[0;34m2026-02-12 13:27:38:507 D [liteplayer]core: [ file-mp3_decoder ] Receive paused event
+[0m[0;34m2026-02-12 13:27:38:507 D [liteplayer]audio_element: [mp3_decoder] Element paused
+[0m[PlaybackController] State: 2 -> 3
+[MusicPlayerService] Received command: stop
+[PlaybackController] Stopped
+[MusicPlayerService] ⏹️  Stopped
+[0;32m2026-02-12 13:27:40:120 I [liteplayer]core: Stopping player[file]
+[0m[MusicPlayerService] Sending response for: stop
+[MusicPlayerService] Response sent
+[0;34m2026-02-12 13:27:40:121 D [liteplayer]core: [ file-mp3_decoder ] Receive stopped event
+[0m[PlaybackController] State: 3 -> 4
+[0;32m2026-02-12 13:27:40:121 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 13:27:40:121 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 13:27:40:121 D [liteplayer]core: [ file-mp3_decoder ] Receive stopped event
+[0m[0;34m2026-02-12 13:27:40:122 D [liteplayer]file: Closing file:0x7f8c000b60
+[0m[PlaybackController] State: 4 -> 0
+[MusicPlayerService] Received command: next
+[MusicPlayerService] handleNext called
+[PlaybackController] next() called
+[PlaybackController] next() - stopping current playback
+[PlaybackController] next() - moving to next track
+[PlaybackController] next() - starting current track
+[PlaybackController] Starting track: ballad (2/45)
+[PlaybackController] Resetting player
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] File loaded, giving player time to prepare
+[0;32m2026-02-12 13:27:40:131 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController] State: 0 -> 1
+[0;32m2026-02-12 13:27:40:131 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3, content_pos:0
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]parser: Discarding 5928 bytes to reach new offset
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor: channels=2, sample_rate=16000, bit_rate=32, frame_size=144
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor: MP3 INFO:
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor:   >channels          : 2
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor:   >sample_rate       : 16000
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor:   >bit_rate          : 32
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor:   >frame_size        : 144
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]mp3_extractor:   >frame_start_offset: 7976
+[0m[0;32m2026-02-12 13:27:40:131 I [liteplayer]parser: MediaInfo: codec_type[2], samplerate[16000], channels[2], bits[16], pos[7976], len[232904], duration[56232ms]
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2048 bytes in ringbuf
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 13:27:40:131 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController] State: 1 -> 1
+[PlaybackController] Starting playback
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] Playback started successfully
+[PlaybackController] next() - returning true
+[MusicPlayerService] handleNext: getting current track
+[MusicPlayerService] handleNext: got track: ballad
+[0;32m2026-02-12 13:27:40:631 I [liteplayer]core: Starting player[file]
+[0m[MusicPlayerService] ⏭️  Next: "ballad"
+[MusicPlayerService] handleNext returning success
+[MusicPlayerService] Sending response for: next
+[MusicPlayerService] Response sent
+[0;34m2026-02-12 13:27:40:631 D [liteplayer]audio_element: [mp3_decoder] opening input reader
+[0m[0;34m2026-02-12 13:27:40:636 D [liteplayer]audio_element: [mp3_decoder] opening output writer
+[0m[0;34m2026-02-12 13:27:40:636 D [liteplayer]audio_element: [mp3_decoder] el opened
+[0m[0;34m2026-02-12 13:27:40:636 D [liteplayer]core: [ file-mp3_decoder ] Receive started event
+[0m[0;34m2026-02-12 13:27:40:636 D [liteplayer]audio_element: [mp3_decoder] Element resumed
+[0m[PlaybackController] State: 1 -> 2
+[0;32m2026-02-12 13:27:40:636 I [liteplayer]core: [ file-mp3_decoder ] Receive codec info: samplerate=16000, ch=2, bits=16
+[0m[0;32m2026-02-12 13:27:40:636 I [liteplayer]core: Opening sink: rate:16000, channels:2, bits:16
+[0m[0;34m2026-02-12 13:27:40:636 D [liteplayer]alsa: Opening alsa: samplerate=16000, channels=2, bits=16
+[0mPlug PCM: Rate conversion PCM (48000, sformat=S16_LE)
+Converter: libsamplerate
+Protocol version: 10002
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 16000
+  exact rate   : 16000 (16000/1)
+  msbits       : 16
+  buffer_size  : 6000
+  period_size  : 2000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 2000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 6000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1688849860263936000
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 3
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 688896184
+[MusicPlayerService] Received command: previous
+[MusicPlayerService] handlePrevious called
+[PlaybackController] prev() called
+[PlaybackController] prev() - stopping current playback
+[PlaybackController] prev() - moving to previous track
+[PlaybackController] prev() - starting current track
+[PlaybackController] Starting track: AlanWalker-Faded (1/45)
+[PlaybackController] Resetting player
+[0;32m2026-02-12 13:27:45:647 I [liteplayer]core: Stopping player[file]
+[0m[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[0;34m2026-02-12 13:27:45:762 D [liteplayer]audio_element: [mp3_decoder] closing output writer
+[0m[0;32m2026-02-12 13:27:45:762 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 13:27:45:762 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 13:27:46:132 D [liteplayer]audio_element: [mp3_decoder] closing input reader
+[0m[0;32m2026-02-12 13:27:46:132 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 13:27:46:132 D [liteplayer]file: Closing file:0x7f8c000b60
+[0m[0;34m2026-02-12 13:27:46:132 D [liteplayer]audio_element: [mp3_decoder] closed
+[0m[0;34m2026-02-12 13:27:46:132 D [liteplayer]core: [ file-mp3_decoder ] Receive stopped event
+[0m[PlaybackController] State: 2 -> 4
+[PlaybackController] Track completed
+[PlaybackController] Auto-playing next track
+[PlaybackController] next() called
+[PlaybackController] next() - stopping current playback
+[PlaybackController] next() - moving to next track
+[PlaybackController] next() - starting current track
+[PlaybackController] Starting track: ballad (2/45)
+[PlaybackController] Resetting player
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3

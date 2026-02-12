@@ -1,0 +1,1209 @@
+nohup: ignoring input
+========================================
+  Music Player Server
+  Phase 4 - ZMQ Remote Control
+========================================
+
+[Server] Using config file: /home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/config/music_player.yaml
+[ConfigLoader] Database path: data/music_library.db -> /home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/engine/build/data/music_library.db
+[ConfigLoader] Configuration loaded successfully
+[MusicPlayerService] ZMQ initialized
+  Command endpoint: ipc:///tmp/music_player_cmd.sock
+  Event endpoint: ipc:///tmp/music_player_event.sock
+[MusicLibrary] Database opened: /home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/engine/build/data/music_library.db
+[LitePlayerWrapper] Initialized successfully
+[PlaybackController] Initialized successfully
+[MusicPlayerService] Scanning music directories...
+[MusicPlayerService] Scanning directory: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal
+  Found 32 tracks
+[0;34m2026-02-12 15:29:03:356 D mlooper: [ael-listplayer]: Entry looper thread: thread_id=[0x7f9281af40]
+[0m[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/sheep.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/pig.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/kookaburra.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/elephant.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/zebra.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cow.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/leopard.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dog.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps1.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cat.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/whale.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps2.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/goose.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/coyote.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/crow.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/tiger.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/snake.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/frog.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chimpanzee.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/rooster.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/owl.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/wolf.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/lion.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/donkey.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chicken.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/horse.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/duck.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dolphin.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/gibbon.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav
+[MusicLibrary] Added 32/32 tracks
+  Added 32 new tracks to database
+[MusicPlayerService] Scanning directory: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music
+  Found 12 tracks
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/exercise.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/classic.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/salsa.wav
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/huangmeixi.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/rock.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/trot.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature-60s.mp3
+[MusicLibrary] Track already exists: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/funk.mp3
+[MusicLibrary] Added 12/12 tracks
+  Added 12 new tracks to database
+[MusicPlayerService] Scan complete: 44 tracks added
+[MusicPlayerService] Syncing 44 tracks from database to playlist...
+  ✓ Added: AlanWalker-Faded (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3)
+  ✓ Added: ballad (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3)
+  ✓ Added: bear (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav)
+  ✓ Added: bee (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav)
+  ✓ Added: bird (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav)
+  ✓ Added: birthday (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav)
+  ✓ Added: budgie_chirps1 (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps1.wav)
+  ✓ Added: budgie_chirps2 (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/budgie_chirps2.wav)
+  ✓ Added: cat (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cat.wav)
+  ✓ Added: chicken (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chicken.wav)
+  ✓ Added: chimpanzee (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/chimpanzee.wav)
+  ✓ Added: classic (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/classic.mp3)
+  ✓ Added: cow (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/cow.wav)
+  ✓ Added: coyote (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/coyote.wav)
+  ✓ Added: crow (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/crow.wav)
+  ✓ Added: dog (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dog.wav)
+  ✓ Added: dolphin (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/dolphin.wav)
+  ✓ Added: donkey (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/donkey.wav)
+  ✓ Added: duck (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/duck.wav)
+  ✓ Added: elephant (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/elephant.wav)
+  ✓ Added: exercise (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/exercise.mp3)
+  ✓ Added: frog (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/frog.wav)
+  ✓ Added: funk (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/funk.mp3)
+  ✓ Added: gibbon (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/gibbon.wav)
+  ✓ Added: goose (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/goose.wav)
+  ✓ Added: horse (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/horse.wav)
+  ✓ Added: huangmeixi (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/huangmeixi.mp3)
+  ✓ Added: kookaburra (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/kookaburra.wav)
+  ✓ Added: leopard (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/leopard.wav)
+  ✓ Added: lion (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/lion.wav)
+  ✓ Added: nature (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature.mp3)
+  ✓ Added: nature-60s (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/nature-60s.mp3)
+  ✓ Added: owl (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/owl.wav)
+  ✓ Added: pig (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/pig.wav)
+  ✓ Added: rock (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/rock.mp3)
+  ✓ Added: rooster (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/rooster.wav)
+  ✓ Added: salsa (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/salsa.wav)
+  ✓ Added: sheep (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/sheep.wav)
+  ✓ Added: snake (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/snake.wav)
+  ✓ Added: tiger (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/tiger.wav)
+  ✓ Added: trot (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/trot.mp3)
+  ✓ Added: whale (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/whale.wav)
+  ✓ Added: wolf (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/wolf.wav)
+  ✓ Added: zebra (/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/zebra.wav)
+[MusicPlayerService] Playlist now has 44 tracks
+[MusicPlayerService] Service initialized successfully
+[MusicPlayerService] Command loop started
+[MusicPlayerService] Service started
+[Server] Service is running. Press Ctrl+C to stop.
+
+[MusicPlayerService] Event loop started
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Starting current track
+[PlaybackController] startCurrentTrackInternal: "AlanWalker-Faded" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] Waiting for async prepare (500ms)...
+[0;32m2026-02-12 15:29:04:751 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3
+[0m[0;34m2026-02-12 15:29:04:751 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=0)
+[0;32m2026-02-12 15:29:04:751 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:29:04:751 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/AlanWalker-Faded.mp3, content_pos:0
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor: channels=2, sample_rate=44100, bit_rate=128, frame_size=417
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor: MP3 INFO:
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor:   >channels          : 2
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor:   >sample_rate       : 44100
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor:   >bit_rate          : 128
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor:   >frame_size        : 417
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]mp3_extractor:   >frame_start_offset: 1100
+[0m[0;32m2026-02-12 15:29:04:758 I [liteplayer]parser: MediaInfo: codec_type[2], samplerate[44100], channels[2], bits[16], pos[1100], len[1067730], duration[66664ms]
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 948 bytes in ringbuf
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:29:04:758 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=0)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::play] ========== END ==========
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[0;32m2026-02-12 15:29:05:252 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:29:05:252 D [liteplayer]audio_element: [mp3_decoder] opening input reader
+[0m[0;34m2026-02-12 15:29:05:252 D [liteplayer]audio_element: [mp3_decoder] opening output writer
+[0m[0;34m2026-02-12 15:29:05:253 D [liteplayer]audio_element: [mp3_decoder] el opened
+[0m[0;34m2026-02-12 15:29:05:253 D [liteplayer]core: [ file-mp3_decoder ] Receive started event
+[0m[0;34m2026-02-12 15:29:05:253 D [liteplayer]audio_element: [mp3_decoder] Element resumed
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)
+[0;32m2026-02-12 15:29:05:253 I [liteplayer]core: [ file-mp3_decoder ] Receive codec info: samplerate=44100, ch=2, bits=16
+[0m[0;32m2026-02-12 15:29:05:253 I [liteplayer]core: Opening sink: rate:44100, channels:2, bits:16
+[0m[0;34m2026-02-12 15:29:05:253 D [liteplayer]alsa: Opening alsa: samplerate=44100, channels=2, bits=16
+[0mPlug PCM: Rate conversion PCM (48000, sformat=S16_LE)
+Converter: libsamplerate
+Protocol version: 10002
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 44100
+  exact rate   : 44100 (44100/1)
+  msbits       : 16
+  buffer_size  : 16537
+  period_size  : 5512
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 5512
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 16537
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 4654751689864118272
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 1038558152
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[MusicPlayerService] Received command: play
+[PlaybackController::play] ========== START ==========
+[PlaybackController::play] Already playing
+[MusicPlayerService] ▶️  Playing: "AlanWalker-Faded"
+[MusicPlayerService] Sending response for: play
+[MusicPlayerService] Response sent
+[0;34m2026-02-12 15:30:11:623 D [liteplayer]file: file read done: 1067730/1067730
+[0m[0;34m2026-02-12 15:30:11:623 D [liteplayer]audio_element: IN-[mp3_decoder] AEL_IO_DONE,-2
+[0m[0;34m2026-02-12 15:30:11:623 D [liteplayer]audio_element: [mp3_decoder] closing output writer
+[0m[0;32m2026-02-12 15:30:11:623 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 15:30:11:623 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 15:30:11:987 D [liteplayer]audio_element: [mp3_decoder] closing input reader
+[0m[0;32m2026-02-12 15:30:11:987 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 15:30:11:987 D [liteplayer]file: Closing file:0x7f84000b60
+[0m[0;34m2026-02-12 15:30:11:987 D [liteplayer]audio_element: [mp3_decoder] closed
+[0m[0;34m2026-02-12 15:30:11:987 D [liteplayer]core: [ file-mp3_decoder ] Receive finished event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 2 -> 4 (isTransitioning=0)
+[PlaybackController] Track completed (auto-next requested)
+[MusicPlayerService] Controller event: TrackEnded (AlanWalker-Faded)
+[PlaybackController::next] ========== START ==========
+[PlaybackController::next] Setting isTransitioning_=true
+[PlaybackController::next] Calling safeStopInternal...
+[PlaybackController] safeStopInternal: already stopped/idle
+[PlaybackController::next] Moving to next track in playlist
+[PlaybackController::next] Starting new track...
+[PlaybackController] startCurrentTrackInternal: "ballad" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[0;32m2026-02-12 15:30:11:990 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 15:30:11:991 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 15:30:11:991 D [liteplayer]core: [ file-mp3_decoder ] Receive stopped event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 4 -> 4 (isTransitioning=1)
+[PlaybackController::onPlayerStateChanged] Callback thread - new state: 0
+[PlaybackController] State transition: 4 -> 0 (isTransitioning=1)
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] Waiting for async prepare (500ms)...
+[0;32m2026-02-12 15:30:12:192 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3
+[0m[0;34m2026-02-12 15:30:12:192 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=1)
+[0;32m2026-02-12 15:30:12:192 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:30:12:192 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/ballad.mp3, content_pos:0
+[0m[0;34m2026-02-12 15:30:12:199 D [liteplayer]parser: Discarding 5928 bytes to reach new offset
+[0m[0;34m2026-02-12 15:30:12:199 D [liteplayer]mp3_extractor: channels=2, sample_rate=16000, bit_rate=32, frame_size=144
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor: MP3 INFO:
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor:   >channels          : 2
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor:   >sample_rate       : 16000
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor:   >bit_rate          : 32
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor:   >frame_size        : 144
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]mp3_extractor:   >frame_start_offset: 7976
+[0m[0;32m2026-02-12 15:30:12:200 I [liteplayer]parser: MediaInfo: codec_type[2], samplerate[16000], channels[2], bits[16], pos[7976], len[232904], duration[56232ms]
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2048 bytes in ringbuf
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:30:12:200 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=1)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::next] ========== END (result=1) ==========
+[0;32m2026-02-12 15:30:12:692 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:30:12:692 D [liteplayer]audio_element: [mp3_decoder] opening input reader
+[0m[0;34m2026-02-12 15:30:12:693 D [liteplayer]audio_element: [mp3_decoder] opening output writer
+[0m[0;34m2026-02-12 15:30:12:693 D [liteplayer]audio_element: [mp3_decoder] el opened
+[0m[0;34m2026-02-12 15:30:12:693 D [liteplayer]core: [ file-mp3_decoder ] Receive started event
+[0m[0;34m2026-02-12 15:30:12:693 D [liteplayer]audio_element: [mp3_decoder] Element resumed
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)
+[0;32m2026-02-12 15:30:12:693 I [liteplayer]core: [ file-mp3_decoder ] Receive codec info: samplerate=16000, ch=2, bits=16
+[0m[0;32m2026-02-12 15:30:12:693 I [liteplayer]core: Opening sink: rate:16000, channels:2, bits:16
+[0m[0;34m2026-02-12 15:30:12:693 D [liteplayer]alsa: Opening alsa: samplerate=16000, channels=2, bits=16
+[0mPlug PCM: Rate conversion PCM (48000, sformat=S16_LE)
+Converter: libsamplerate
+Protocol version: 10002
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 16000
+  exact rate   : 16000 (16000/1)
+  msbits       : 16
+  buffer_size  : 6000
+  period_size  : 2000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 2000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 6000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1688849860263936000
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 3
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 1041792264
+[0;34m2026-02-12 15:31:08:611 D [liteplayer]file: file read done: 232904/232904
+[0m[0;34m2026-02-12 15:31:08:611 D [liteplayer]audio_element: IN-[mp3_decoder] AEL_IO_DONE,-2
+[0m[0;34m2026-02-12 15:31:08:611 D [liteplayer]audio_element: [mp3_decoder] closing output writer
+[0m[0;32m2026-02-12 15:31:08:611 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 15:31:08:611 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 15:31:08:986 D [liteplayer]audio_element: [mp3_decoder] closing input reader
+[0m[0;32m2026-02-12 15:31:08:986 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 15:31:08:986 D [liteplayer]file: Closing file:0x7f84000e90
+[0m[0;34m2026-02-12 15:31:08:986 D [liteplayer]audio_element: [mp3_decoder] closed
+[0m[0;34m2026-02-12 15:31:08:986 D [liteplayer]core: [ file-mp3_decoder ] Receive finished event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 2 -> 4 (isTransitioning=0)
+[PlaybackController] Track completed (auto-next requested)
+[MusicPlayerService] Controller event: TrackEnded (ballad)
+[PlaybackController::next] ========== START ==========
+[PlaybackController::next] Setting isTransitioning_=true
+[PlaybackController::next] Calling safeStopInternal...
+[PlaybackController] safeStopInternal: already stopped/idle
+[PlaybackController::next] Moving to next track in playlist
+[PlaybackController::next] Starting new track...
+[PlaybackController] startCurrentTrackInternal: "bear" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[0;32m2026-02-12 15:31:08:994 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 15:31:08:994 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 15:31:08:994 D [liteplayer]core: [ file-mp3_decoder ] Receive stopped event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 4 -> 4 (isTransitioning=1)
+[PlaybackController::onPlayerStateChanged] Callback thread - new state: 0
+[PlaybackController] State transition: 4 -> 0 (isTransitioning=1)
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] Waiting for async prepare (500ms)...
+[0;32m2026-02-12 15:31:09:194 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav
+[0m[0;34m2026-02-12 15:31:09:194 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=1)
+[0;32m2026-02-12 15:31:09:194 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:31:09:194 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bear.wav, content_pos:0
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor: WAV INFO:
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >audioFormat          : 1
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >sampleRate           : 48000
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >channels             : 1
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >bits                 : 16
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >byteRate             : 96000
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >blockAlign           : 2
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >dataSize             : 252832
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]wav_extractor:   >dataOffset           : 44
+[0m[0;32m2026-02-12 15:31:09:204 I [liteplayer]parser: MediaInfo: codec_type[1], samplerate[48000], channels[1], bits[16], pos[44], len[252876], duration[2000ms]
+[0m[0;34m2026-02-12 15:31:09:204 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2004 bytes in ringbuf
+[0m[0;34m2026-02-12 15:31:09:205 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:31:09:205 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:31:09:205 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:31:09:205 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:31:09:205 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=1)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::next] ========== END (result=1) ==========
+[0;32m2026-02-12 15:31:09:694 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:31:09:694 D [liteplayer]audio_element: [wav_decoder] opening input reader
+[0m[0;34m2026-02-12 15:31:09:694 D [liteplayer]audio_element: [wav_decoder] opening output writer
+[0m[0;34m2026-02-12 15:31:09:694 D [liteplayer]audio_element: [wav_decoder] el opened
+[0m[0;34m2026-02-12 15:31:09:694 D [liteplayer]core: [ file-wav_decoder ] Receive started event
+[0m[0;34m2026-02-12 15:31:09:694 D [liteplayer]audio_element: [wav_decoder] Element resumed
+[0m[0;32m2026-02-12 15:31:09:694 I [liteplayer]core: [ file-wav_decoder ] Receive codec info: samplerate=48000, ch=1, bits=16
+[0m[0;32m2026-02-12 15:31:09:694 I [liteplayer]core: Opening sink: rate:48000, channels:1, bits:16
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)
+[0;34m2026-02-12 15:31:09:694 D [liteplayer]alsa: Opening alsa: samplerate=48000, channels=1, bits=16
+[0mPlug PCM: Route conversion PCM (sformat=S16_LE)
+  Transformation table:
+    0 <- 0
+    1 <- 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 1044528152
+[0;34m2026-02-12 15:31:12:115 D [liteplayer]audio_element: [wav_decoder] closing output writer
+[0m[0;32m2026-02-12 15:31:12:115 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 15:31:12:115 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 15:31:12:362 D [liteplayer]audio_element: [wav_decoder] closing input reader
+[0m[0;32m2026-02-12 15:31:12:362 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 15:31:12:362 D [liteplayer]file: Closing file:0x7f84000e90
+[0m[0;34m2026-02-12 15:31:12:362 D [liteplayer]audio_element: [wav_decoder] closed
+[0m[0;34m2026-02-12 15:31:12:362 D [liteplayer]core: [ file-wav_decoder ] Receive finished event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 2 -> 4 (isTransitioning=0)
+[PlaybackController] Track completed (auto-next requested)
+[MusicPlayerService] Controller event: TrackEnded (bear)
+[PlaybackController::next] ========== START ==========
+[PlaybackController::next] Setting isTransitioning_=true
+[PlaybackController::next] Calling safeStopInternal...
+[PlaybackController] safeStopInternal: already stopped/idle
+[PlaybackController::next] Moving to next track in playlist
+[PlaybackController::next] Starting new track...
+[PlaybackController] startCurrentTrackInternal: "bee" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[0;32m2026-02-12 15:31:12:372 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 15:31:12:372 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 15:31:12:372 D [liteplayer]core: [ file-wav_decoder ] Receive stopped event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 4 -> 4 (isTransitioning=1)
+[PlaybackController::onPlayerStateChanged] Callback thread - new state: 0
+[PlaybackController] State transition: 4 -> 0 (isTransitioning=1)
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[0;32m2026-02-12 15:31:12:572 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav
+[0m[PlaybackController] Waiting for async prepare (500ms)...
+[0;34m2026-02-12 15:31:12:572 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=1)
+[0;32m2026-02-12 15:31:12:572 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:31:12:572 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bee.wav, content_pos:0
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor: WAV INFO:
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor:   >audioFormat          : 1
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor:   >sampleRate           : 48000
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor:   >channels             : 1
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor:   >bits                 : 16
+[0m[0;34m2026-02-12 15:31:12:580 D [liteplayer]wav_extractor:   >byteRate             : 96000
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]wav_extractor:   >blockAlign           : 2
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]wav_extractor:   >dataSize             : 417664
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]wav_extractor:   >dataOffset           : 44
+[0m[0;32m2026-02-12 15:31:12:581 I [liteplayer]parser: MediaInfo: codec_type[1], samplerate[48000], channels[1], bits[16], pos[44], len[417708], duration[4000ms]
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2004 bytes in ringbuf
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:31:12:581 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=1)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::next] ========== END (result=1) ==========
+[0;32m2026-02-12 15:31:13:072 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:31:13:072 D [liteplayer]audio_element: [wav_decoder] opening input reader
+[0m[0;34m2026-02-12 15:31:13:072 D [liteplayer]audio_element: [wav_decoder] opening output writer
+[0m[0;34m2026-02-12 15:31:13:072 D [liteplayer]audio_element: [wav_decoder] el opened
+[0m[0;34m2026-02-12 15:31:13:072 D [liteplayer]core: [ file-wav_decoder ] Receive started event
+[0m[0;32m2026-02-12 15:31:13:072 I [liteplayer]core: [ file-wav_decoder ] Receive codec info: samplerate=48000, ch=1, bits=16
+[0m[0;32m2026-02-12 15:31:13:072 I [liteplayer]core: Opening sink: rate:48000, channels:1, bits:16
+[0m[0;34m2026-02-12 15:31:13:072 D [liteplayer]alsa: Opening alsa: samplerate=48000, channels=1, bits=16
+[0m[0;34m2026-02-12 15:31:13:073 D [liteplayer]audio_element: [wav_decoder] Element resumed
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)
+Plug PCM: Route conversion PCM (sformat=S16_LE)
+  Transformation table:
+    0 <- 0
+    1 <- 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 1044690160
+[0;34m2026-02-12 15:31:17:113 D [liteplayer]audio_element: [wav_decoder] closing output writer
+[0m[0;32m2026-02-12 15:31:17:113 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 15:31:17:113 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 15:31:17:486 D [liteplayer]audio_element: [wav_decoder] closing input reader
+[0m[0;32m2026-02-12 15:31:17:486 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 15:31:17:486 D [liteplayer]file: Closing file:0x7f84002950
+[0m[0;34m2026-02-12 15:31:17:486 D [liteplayer]audio_element: [wav_decoder] closed
+[0m[0;34m2026-02-12 15:31:17:486 D [liteplayer]core: [ file-wav_decoder ] Receive finished event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 2 -> 4 (isTransitioning=0)
+[PlaybackController] Track completed (auto-next requested)
+[MusicPlayerService] Controller event: TrackEnded (bee)
+[PlaybackController::next] ========== START ==========
+[PlaybackController::next] Setting isTransitioning_=true
+[PlaybackController::next] Calling safeStopInternal...
+[PlaybackController] safeStopInternal: already stopped/idle
+[PlaybackController::next] Moving to next track in playlist
+[PlaybackController::next] Starting new track...
+[PlaybackController] startCurrentTrackInternal: "bird" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[0;32m2026-02-12 15:31:17:488 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 15:31:17:488 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 15:31:17:488 D [liteplayer]core: [ file-wav_decoder ] Receive stopped event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 4 -> 4 (isTransitioning=1)
+[PlaybackController::onPlayerStateChanged] Callback thread - new state: 0
+[PlaybackController] State transition: 4 -> 0 (isTransitioning=1)
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] Waiting for async prepare (500ms)...
+[0;32m2026-02-12 15:31:17:688 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav
+[0m[0;34m2026-02-12 15:31:17:688 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=1)
+[0;32m2026-02-12 15:31:17:688 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:31:17:688 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal/bird.wav, content_pos:0
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor: WAV INFO:
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >audioFormat          : 1
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >sampleRate           : 48000
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >channels             : 1
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >bits                 : 16
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >byteRate             : 96000
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >blockAlign           : 2
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >dataSize             : 260184
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]wav_extractor:   >dataOffset           : 44
+[0m[0;32m2026-02-12 15:31:17:697 I [liteplayer]parser: MediaInfo: codec_type[1], samplerate[48000], channels[1], bits[16], pos[44], len[260228], duration[2000ms]
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2004 bytes in ringbuf
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:31:17:697 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=1)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::next] ========== END (result=1) ==========
+[0;32m2026-02-12 15:31:18:189 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:31:18:189 D [liteplayer]audio_element: [wav_decoder] opening input reader
+[0m[0;34m2026-02-12 15:31:18:189 D [liteplayer]audio_element: [wav_decoder] opening output writer
+[0m[0;34m2026-02-12 15:31:18:189 D [liteplayer]audio_element: [wav_decoder] el opened
+[0m[0;34m2026-02-12 15:31:18:189 D [liteplayer]core: [ file-wav_decoder ] Receive started event
+[0m[0;32m2026-02-12 15:31:18:189 I [liteplayer]core: [ file-wav_decoder ] Receive codec info: samplerate=48000, ch=1, bits=16
+[0m[0;34m2026-02-12 15:31:18:189 D [liteplayer]audio_element: [wav_decoder] Element resumed
+[0m[0;32m2026-02-12 15:31:18:189 I [liteplayer]core: Opening sink: rate:48000, channels:1, bits:16
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: [0;34m2026-02-12 15:31:18:189 D [liteplayer]alsa: Opening alsa: samplerate=48000, channels=1, bits=16
+[0m2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)
+Plug PCM: Route conversion PCM (sformat=S16_LE)
+  Transformation table:
+    0 <- 0
+    1 <- 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 18000
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+Hardware PCM card 0 'wm8960-soundcard' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 18000
+  period_size  : 6000
+  period_time  : 125000
+  tstamp_mode  : ENABLE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 6000
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 0
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 5066549580791808000
+  appl_ptr     : 0
+  hw_ptr       : 1044936184
+[0;34m2026-02-12 15:31:20:612 D [liteplayer]audio_element: [wav_decoder] closing output writer
+[0m[0;32m2026-02-12 15:31:20:613 I [liteplayer]core: Closing sink
+[0m[0;34m2026-02-12 15:31:20:613 D [liteplayer]alsa: closing alsa
+[0m[0;34m2026-02-12 15:31:20:986 D [liteplayer]audio_element: [wav_decoder] closing input reader
+[0m[0;32m2026-02-12 15:31:20:986 I [liteplayer]core: Closing source
+[0m[0;34m2026-02-12 15:31:20:986 D [liteplayer]file: Closing file:0x7f84002950
+[0m[0;34m2026-02-12 15:31:20:986 D [liteplayer]audio_element: [wav_decoder] closed
+[0m[0;34m2026-02-12 15:31:20:986 D [liteplayer]core: [ file-wav_decoder ] Receive finished event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 2 -> 4 (isTransitioning=0)
+[PlaybackController] Track completed (auto-next requested)
+[MusicPlayerService] Controller event: TrackEnded (bird)
+[PlaybackController::next] ========== START ==========
+[PlaybackController::next] Setting isTransitioning_=true
+[PlaybackController::next] Calling safeStopInternal...
+[PlaybackController] safeStopInternal: already stopped/idle
+[PlaybackController::next] Moving to next track in playlist
+[PlaybackController::next] Starting new track...
+[PlaybackController] startCurrentTrackInternal: "birthday" (path=/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav)
+[PlaybackController] Releasing state lock, acquiring player lock...
+[PlaybackController] ✅ Acquired player operation lock
+[PlaybackController] Calling player_.reset()...
+[LitePlayerWrapper] reset called
+[LitePlayerWrapper] reset result=0
+[PlaybackController] Waiting for reset to complete (200ms)...
+[0;32m2026-02-12 15:31:20:994 I [liteplayer]core: Resetting player[file]
+[0m[0;34m2026-02-12 15:31:20:994 D [liteplayer]core: Destroy audio decoder
+[0m[0;34m2026-02-12 15:31:20:994 D [liteplayer]core: [ file-wav_decoder ] Receive stopped event
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 4
+[PlaybackController] State transition: 4 -> 4 (isTransitioning=1)
+[PlaybackController::onPlayerStateChanged] Callback thread - new state: 0
+[PlaybackController] State transition: 4 -> 0 (isTransitioning=1)
+[PlaybackController] Loading file: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav
+[LitePlayerWrapper] loadFile called: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_set_data_source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav
+[LitePlayerWrapper] loadPlaylist calling listplayer_prepare_async
+[LitePlayerWrapper] loadPlaylist finished
+[LitePlayerWrapper] loadFile result: success
+[PlaybackController] Waiting for async prepare (500ms)...
+[0;32m2026-02-12 15:31:21:194 I [liteplayer]core: Set player source: /home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav
+[0m[0;34m2026-02-12 15:31:21:194 D [liteplayer]core: Using source_wrapper: (file), sink_wrapper: (alsa)
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 0 -> 1 (isTransitioning=1)
+[0;32m2026-02-12 15:31:21:194 I [liteplayer]core: Async preparing player[file]
+[0m[0;34m2026-02-12 15:31:21:194 D [liteplayer]file: Opening file:/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music/birthday.wav, content_pos:0
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor: WAV INFO:
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >audioFormat          : 1
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >sampleRate           : 48000
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >channels             : 1
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >bits                 : 16
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >byteRate             : 96000
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >blockAlign           : 2
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >dataSize             : 1153652
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]wav_extractor:   >dataOffset           : 44
+[0m[0;32m2026-02-12 15:31:21:202 I [liteplayer]parser: MediaInfo: codec_type[1], samplerate[48000], channels[1], bits[16], pos[44], len[1153696], duration[12000ms]
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]parser: Mediasource will reuse source handle, save remaing 2004 bytes in ringbuf
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]core: [1.0] Create decoder element
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]core: [1.1] Create sink element
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]core: [1.2] Create source element, sync mode, ringbuf size: 2048
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]core: [2.0] Register event callback of decoder elements
+[0m[0;34m2026-02-12 15:31:21:202 D [liteplayer]core: [3.0] Run decoder element
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 1
+[PlaybackController] State transition: 1 -> 1 (isTransitioning=1)
+[PlaybackController] Calling player_.start()...
+[LitePlayerWrapper] start called, current state=1
+[LitePlayerWrapper] start result=0
+[PlaybackController] ✅ Track started successfully
+[PlaybackController::next] ========== END (result=1) ==========
+[0;32m2026-02-12 15:31:21:695 I [liteplayer]core: Starting player[file]
+[0m[0;34m2026-02-12 15:31:21:695 D [liteplayer]audio_element: [wav_decoder] opening input reader
+[0m[0;34m2026-02-12 15:31:21:695 D [liteplayer]audio_element: [wav_decoder] opening output writer
+[0m[0;34m2026-02-12 15:31:21:695 D [liteplayer]audio_element: [wav_decoder] el opened
+[0m[0;34m2026-02-12 15:31:21:695 D [liteplayer]core: [ file-wav_decoder ] Receive started event
+[0m[0;34m2026-02-12 15:31:21:695 D [liteplayer]audio_element: [wav_decoder] Element resumed
+[0m[0;32m2026-02-12 15:31:21:695 I [liteplayer]core: [ file-wav_decoder ] Receive codec info: samplerate=48000, ch=1, bits=16
+[0m[0;32m2026-02-12 15:31:21:695 I [liteplayer]core: Opening sink: rate:48000, channels:1, bits:16
+[0m[PlaybackController::onPlayerStateChanged] Callback thread - new state: 2
+[PlaybackController] State transition: 1 -> 2 (isTransitioning=0)

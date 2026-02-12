@@ -1,0 +1,102 @@
+============================================================
+  Music Player Service - Test Suite
+============================================================
+✅ Connected to music player service
+   Command: ipc:///tmp/music_player_cmd.sock
+   Events:  ipc:///tmp/music_player_event.sock
+
+============================================================
+Test 1: Get Status
+============================================================
+
+📤 Sending: get_status
+   Params: {}
+📥 Response: success
+   Result: {'current_track_id': 0, 'duration_ms': -1, 'position_ms': 0, 'state': 'stopped', 'volume': 100}
+
+============================================================
+Test 2: Add Track
+============================================================
+
+📤 Sending: add_track
+   Params: {'file_path': '/music/test_1770868547.mp3', 'title': 'Test Song', 'artist': 'Test Artist', 'album': 'Test Album', 'year': 2024, 'duration_ms': 180000}
+📥 Response: success
+   Result: {'message': 'Track added successfully', 'track_id': 1}
+
+============================================================
+Test 3: Get Track
+============================================================
+
+📤 Sending: get_track
+   Params: {'track_id': 1}
+📥 Response: success
+   Result: {'album': 'Test Album', 'artist': 'Test Artist', 'duration_ms': 180000, 'id': 1, 'is_favorite': False, 'play_count': 0, 'title': 'Test Song', 'year': 2024}
+
+============================================================
+Test 4: Get All Tracks
+============================================================
+
+📤 Sending: get_all_tracks
+   Params: {'limit': 10}
+📥 Response: success
+   Result: {'count': 1, 'tracks': [{'album': 'Test Album', 'artist': 'Test Artist', 'id': 1, 'title': 'Test Song'}]}
+   📚 Total tracks: 1
+
+============================================================
+Test 5: Search Tracks
+============================================================
+
+📤 Sending: search_tracks
+   Params: {'query': 'Test', 'limit': 5}
+📥 Response: success
+   Result: {'count': 1, 'tracks': [{'album': 'Test Album', 'artist': 'Test Artist', 'id': 1, 'title': 'Test Song'}]}
+   🔍 Found: 1 tracks
+
+============================================================
+Test 6: Playback Control
+============================================================
+
+📤 Sending: play
+   Params: {}
+📥 Response: success
+   Result: {'current_track': 'Test Song', 'duration_ms': -1, 'message': 'Playback started', 'position_ms': 0, 'status': 'playing'}
+
+📤 Sending: pause
+   Params: {}
+📥 Response: error
+   ❌ Error: Failed to pause playback
+
+📤 Sending: stop
+   Params: {}
+📥 Response: success
+   Result: {'message': 'Playback stopped', 'status': 'stopped'}
+
+============================================================
+Test 7: Navigation Control
+============================================================
+
+📤 Sending: next
+   Params: {}
+📥 Response: error
+   ❌ Error: Failed to skip to next track
+
+📤 Sending: previous
+   Params: {}
+📥 Response: error
+   ❌ Error: Failed to skip to previous track
+
+============================================================
+Test 8: Event Subscription
+============================================================
+
+📡 Listening for events (3s)...
+   [11:55:47] track_added: {'title': 'Test Song', 'track_id': 1}
+   [11:55:48] heartbeat: {'status': 'alive'}
+   [11:55:53] heartbeat: {'status': 'alive'}
+   Total events received: 3
+
+============================================================
+  ✅ All tests completed!
+============================================================
+
+✅ Connection closed

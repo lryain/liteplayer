@@ -26,6 +26,11 @@ public:
     void setPlayMode(PlayMode mode);
     PlayMode getPlayMode() const { return playMode_; }
     
+    // 循环次数控制
+    void setLoopCount(int count);  // 设置循环次数（0=无限制）
+    int getLoopCount() const { return loopCount_; }
+    int getRemainingLoops() const { return remainingLoops_; }
+    void resetLoopCount();  // 重置循环计数
     // 曲目导航
     bool next();  // 移动到下一首，返回是否成功
     bool prev();  // 移动到上一首，返回是否成功
@@ -59,6 +64,8 @@ private:
     std::vector<Track> originalTracks_;   // 原始顺序（用于unshuffle）
     size_t currentIndex_;                 // 当前播放的曲目索引
     PlayMode playMode_;                   // 播放模式
+    int loopCount_;                       // 目标循环次数（0=无限制）
+    int remainingLoops_;                  // 剩余循环次数
     
     mutable std::mt19937 randomEngine_;   // 随机数生成器（mutable因为在const方法中使用）
     bool isShuffled_;                     // 是否处于随机状态

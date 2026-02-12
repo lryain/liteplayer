@@ -152,6 +152,151 @@ bool MusicLibrary::isTrackBadByPath(const std::string& file_path) {
     return bad;
 }
 
+bool MusicLibrary::ensureEmotionTable() {
+    if (!is_open_ || !db_) return false;
+    const char* sql = R"(
+        CREATE TABLE IF NOT EXISTS track_emotions (
+            track_id INTEGER PRIMARY KEY,
+            valence REAL DEFAULT 0.0,
+            arousal REAL DEFAULT 0.3,
+            energy REAL DEFAULT 0.7,
+            mood TEXT,
+            tags_json TEXT,
+            updated_at INTEGER DEFAULT 0,
+            FOREIGN KEY(track_id) REFERENCES tracks(id) ON DELETE CASCADE
+        );
+        CREATE INDEX IF NOT EXISTS idx_track_emotions_mood ON track_emotions(mood);
+    )";
+    return execute(sql);
+}
+
+bool MusicLibrary::upsertTrackEmotion(int64_t track_id,
+                                     double valence,
+                                     double arousal,
+                                     double energy,
+                                     const std::string& mood,
+                                     const std::string& tags_json) {
+    if (!is_open_ || !db_ || track_id <= 0) return false;
+    if (!ensureEmotionTable()) return false;
+
+    const char* sql = R"(
+        INSERT INTO track_emotions(track_id,valence,arousal,energy,mood,tags_json,updated_at)
+        VALUES(?,?,?,?,?,?,?)
+        ON CONFLICT(track_id) DO UPDATE SET
+            valence=excluded.valence,
+            arousal=excluded.arousal,
+            energy=excluded.energy,
+            mood=excluded.mood,
+            tags_json=excluded.tags_json,
+            updated_at=excluded.updated_at
+    )";
+
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db_, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        return false;
+    }
+    const auto now = static_cast<sqlite3_int64>(std::time(nullptr));
+    sqlite3_bind_int64(stmt, 1, track_id);
+    sqlite3_bind_double(stmt, 2, valence);
+    sqlite3_bind_double(stmt, 3, arousal);
+    sqlite3_bind_double(stmt, 4, energy);
+    if (mood.empty()) sqlite3_bind_null(stmt, 5);
+    else sqlite3_bind_text(stmt, 5, mood.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 6, tags_json.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_int64(stmt, 7, now);
+
+    bool ok = (sqlite3_step(stmt) == SQLITE_DONE);
+    sqlite3_finalize(stmt);
+    return ok;
+}
+
+int64_t MusicLibrary::pickTrackIdByEmotion(const std::string& mood,
+                                          double min_valence, double max_valence,
+                                          double min_arousal, double max_arousal,
+                                          double min_energy, double max_energy) {
+    if (!is_open_ || !db_) return -1;
+    if (!ensureEmotionTable()) return -1;
+
+    std::stringstream ss;
+    ss << "SELECT t.id FROM tracks t JOIN track_emotions e ON e.track_id=t.id "
+          "WHERE COALESCE(t.bad_flag,0)=0 "
+          "AND e.valence BETWEEN ? AND ? "
+          "AND e.arousal BETWEEN ? AND ? "
+          "AND e.energy BETWEEN ? AND ? ";
+    if (!mood.empty()) {
+        ss << "AND e.mood = ? ";
+    }
+    ss << "ORDER BY e.updated_at DESC LIMIT 1";
+
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db_, ss.str().c_str(), -1, &stmt, nullptr) != SQLITE_OK) {
+        return -1;
+    }
+    int idx = 1;
+    sqlite3_bind_double(stmt, idx++, min_valence);
+    sqlite3_bind_double(stmt, idx++, max_valence);
+    sqlite3_bind_double(stmt, idx++, min_arousal);
+    sqlite3_bind_double(stmt, idx++, max_arousal);
+    sqlite3_bind_double(stmt, idx++, min_energy);
+    sqlite3_bind_double(stmt, idx++, max_energy);
+    if (!mood.empty()) {
+        sqlite3_bind_text(stmt, idx++, mood.c_str(), -1, SQLITE_TRANSIENT);
+    }
+
+    int64_t id = -1;
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        id = sqlite3_column_int64(stmt, 0);
+    }
+    sqlite3_finalize(stmt);
+    return id;
+}
+
+int64_t MusicLibrary::pickRandomTrackByFilter(const std::string& artist,
+                                             const std::string& album,
+                                             const std::string& genre) {
+    if (!is_open_ || !db_) return -1;
+
+    std::stringstream ss;
+    ss << "SELECT id FROM tracks WHERE COALESCE(bad_flag,0)=0";
+    
+    if (!artist.empty()) {
+        ss << " AND artist LIKE ? ";
+    }
+    if (!album.empty()) {
+        ss << " AND album LIKE ? ";
+    }
+    if (!genre.empty()) {
+        ss << " AND genre LIKE ? ";
+    }
+    ss << " ORDER BY RANDOM() LIMIT 1";
+
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db_, ss.str().c_str(), -1, &stmt, nullptr) != SQLITE_OK) {
+        return -1;
+    }
+
+    int idx = 1;
+    if (!artist.empty()) {
+        std::string pattern = "%" + artist + "%";
+        sqlite3_bind_text(stmt, idx++, pattern.c_str(), -1, SQLITE_TRANSIENT);
+    }
+    if (!album.empty()) {
+        std::string pattern = "%" + album + "%";
+        sqlite3_bind_text(stmt, idx++, pattern.c_str(), -1, SQLITE_TRANSIENT);
+    }
+    if (!genre.empty()) {
+        std::string pattern = "%" + genre + "%";
+        sqlite3_bind_text(stmt, idx++, pattern.c_str(), -1, SQLITE_TRANSIENT);
+    }
+
+    int64_t id = -1;
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        id = sqlite3_column_int64(stmt, 0);
+    }
+    sqlite3_finalize(stmt);
+    return id;
+}
+
 bool MusicLibrary::updateTrack(int64_t id, const Track& track) {
     if (!is_open_) return false;
 

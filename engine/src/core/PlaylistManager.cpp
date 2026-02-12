@@ -14,6 +14,8 @@ namespace music_player {
 PlaylistManager::PlaylistManager()
     : currentIndex_(0)
     , playMode_(PlayMode::Sequential)
+    , loopCount_(0)
+    , remainingLoops_(0)
     , isShuffled_(false)
 {
     // 使用当前时间作为随机种子
@@ -100,6 +102,17 @@ void PlaylistManager::setPlayMode(PlayMode mode) {
               << static_cast<int>(mode) << std::endl;
 }
 
+void PlaylistManager::setLoopCount(int count) {
+    loopCount_ = count;
+    remainingLoops_ = count;
+    std::cout << "[PlaylistManager] Loop count set to: " << count << std::endl;
+}
+
+void PlaylistManager::resetLoopCount() {
+    remainingLoops_ = loopCount_;
+    std::cout << "[PlaylistManager] Loop count reset to: " << loopCount_ << std::endl;
+}
+
 bool PlaylistManager::next() {
     if (tracks_.empty()) {
         return false;
@@ -114,6 +127,23 @@ bool PlaylistManager::next() {
     }
     
     currentIndex_ = nextIdx;
+    
+    // 对于SingleLoop模式：每首歌播放完成时递减
+    // 对于LoopAll/Random模式：每次循环列表完成时递减（回到索引0时）
+    if (loopCount_ > 0 && remainingLoops_ > 0) {
+        // SingleLoop: 每次next()时递减
+        if (playMode_ == PlayMode::SingleLoop) {
+            remainingLoops_--;
+            std::cout << "[PlaylistManager] SingleLoop - remaining plays: " << remainingLoops_ << std::endl;
+        }
+        // LoopAll/Random: 当回到开始位置时递减（完成一个循环周期）
+        else if ((playMode_ == PlayMode::LoopAll || playMode_ == PlayMode::Random) && 
+                 nextIdx == 0) {
+            remainingLoops_--;
+            std::cout << "[PlaylistManager] LoopAll/Random - remaining cycles: " << remainingLoops_ << std::endl;
+        }
+    }
+    
     return true;
 }
 
@@ -212,8 +242,18 @@ bool PlaylistManager::hasNext() const {
             return currentIndex_ < tracks_.size() - 1;
         case PlayMode::LoopAll:
         case PlayMode::Random:
-        case PlayMode::SingleLoop:
-            return true;  // 循环模式总是有下一首
+        case PlayMode::SingleLoop: {
+            // 如果没有设置循环次数，总是返回true（无限循环）
+            if (loopCount_ <= 0) {
+                return true;
+            }
+            // 如果还有剩余循环次数，返回true
+            if (remainingLoops_ > 1) {
+                return true;
+            }
+            // 如果是最后一个循环的最后一首，返回false
+            return false;
+        }
     }
     return false;
 }

@@ -35,6 +35,7 @@ struct Track {
     std::string title;
     std::string artist;
     std::string album;
+    std::string genre;
     int year;
     int duration_ms;
     

@@ -112,6 +112,40 @@ public:
      */
     bool isTrackBadByPath(const std::string& file_path);
 
+    // ========== 情绪标签（兜底 MVP） ==========
+    /** 确保情绪表存在（幂等） */
+    bool ensureEmotionTable();
+
+    /**
+     * @brief 写入/更新曲目的情绪标签
+     * @param track_id tracks.id
+     */
+    bool upsertTrackEmotion(int64_t track_id,
+                            double valence,
+                            double arousal,
+                            double energy,
+                            const std::string& mood,
+                            const std::string& tags_json);
+
+    /**
+     * @brief 按情绪筛选选一个 track_id（简单版：取 updated_at 最新的一首）
+     */
+    int64_t pickTrackIdByEmotion(const std::string& mood,
+                                double min_valence, double max_valence,
+                                double min_arousal, double max_arousal,
+                                double min_energy, double max_energy);
+
+    /**
+     * @brief 按多个条件筛选并随机选择一个曲目
+     * @param artist 艺术家名称（空表示不过滤）
+     * @param album 专辑名称（空表示不过滤）
+     * @param genre 流派名称（空表示不过滤）
+     * @return track_id，失败返回-1
+     */
+    int64_t pickRandomTrackByFilter(const std::string& artist = "",
+                                   const std::string& album = "",
+                                   const std::string& genre = "");
+
     // ========== 曲目管理 ==========
 
     /**

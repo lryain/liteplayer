@@ -218,9 +218,26 @@ void MusicPlayerService::processPendingControllerEvents() {
             }
             case PlayerEvent::ErrorOccurred: {
                 std::cerr << "[MusicPlayerService] Controller event: ErrorOccurred (" << info << ")" << std::endl;
-                // info 可能是 file_path（来自 startCurrentTrackInternal 的 load/start 失败）
+                // info 可能是 file_path，也可能是普通错误文案（如 "Playback error occurred"）。
+                // 仅在其看起来是有效音频文件路径时才做坏轨隔离，避免误标数据库。
+                bool markedBad = false;
                 if (library_ && library_->isOpen() && !info.empty()) {
-                    library_->markTrackBadByPath(info, "liteplayer_load_or_start_failed");
+                    namespace fs = std::filesystem;
+                    try {
+                        fs::path p(info);
+                        std::string ext = p.extension().string();
+                        std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
+                        const bool looksAudio = (ext == ".wav" || ext == ".mp3" || ext == ".m4a" || ext == ".aac");
+                        if (looksAudio && fs::exists(p)) {
+                            markedBad = library_->markTrackBadByPath(info, "liteplayer_load_or_start_failed");
+                        } else {
+                            std::cerr << "[MusicPlayerService] Skip mark bad track: info is not a valid audio path" << std::endl;
+                        }
+                    } catch (...) {
+                        std::cerr << "[MusicPlayerService] Skip mark bad track: invalid path format" << std::endl;
+                    }
+                }
+                if (markedBad) {
                     // 重新同步播放列表，避免坏轨继续留在内存播放队列里
                     controller_->getPlaylistManager().clear();
                     syncDatabaseTracksToPlaylist();
@@ -274,6 +291,219 @@ CommandResponse MusicPlayerService::handleCommand(const CommandRequest& request)
             return handleAddTrack(request.params);
         } else if (request.command == "get_all_tracks") {
             return handleGetAllTracks(request.params);
+        } else if (request.command == "tag_track_emotion") {
+            // 最小实现：写入 track_emotions（供 Python/服务端共用）
+            // params: {track_id, mood, valence, arousal, energy, tags[]}
+            if (!library_ || !library_->isOpen()) {
+                return CommandResponse::error("Library not open", request.request_id);
+            }
+            int64_t track_id = request.params.value("track_id", -1);
+            if (track_id <= 0) {
+                return CommandResponse::error("track_id required", request.request_id);
+            }
+
+            std::string mood = request.params.value("mood", "");
+            double valence = request.params.value("valence", 0.0);
+            double arousal = request.params.value("arousal", 0.3);
+            double energy = request.params.value("energy", 0.7);
+
+            json tags = request.params.value("tags", json::array());
+            std::string tags_json = tags.dump();
+
+            if (!library_->upsertTrackEmotion(track_id, valence, arousal, energy, mood, tags_json)) {
+                return CommandResponse::error("Failed to write emotion tags", request.request_id);
+            }
+
+            const auto now = static_cast<long long>(std::time(nullptr));
+
+            json result;
+            result["track_id"] = track_id;
+            result["mood"] = mood;
+            result["valence"] = valence;
+            result["arousal"] = arousal;
+            result["energy"] = energy;
+            result["tags"] = tags;
+            result["updated_at"] = now;
+            return CommandResponse::success(result, request.request_id);
+        } else if (request.command == "play_by_emotion") {
+            // params: {mood?, min_valence?, max_valence?, min_arousal?, max_arousal?, min_energy?, max_energy?, tags_any?[]}
+            if (!library_ || !library_->isOpen()) {
+                return CommandResponse::error("Library not open", request.request_id);
+            }
+            // 确保播放列表存在
+            if (controller_->getPlaylistSize() == 0) {
+                syncDatabaseTracksToPlaylist();
+            }
+
+            // 读取筛选条件
+            std::string mood = request.params.value("mood", "");
+            double min_v = request.params.value("min_valence", -1.0);
+            double max_v = request.params.value("max_valence", 1.0);
+            double min_a = request.params.value("min_arousal", 0.0);
+            double max_a = request.params.value("max_arousal", 1.0);
+            double min_e = request.params.value("min_energy", 0.0);
+            double max_e = request.params.value("max_energy", 1.0);
+            json tags_any = request.params.value("tags_any", json::array());
+
+            int64_t track_id = library_->pickTrackIdByEmotion(mood, min_v, max_v, min_a, max_a, min_e, max_e);
+            if (track_id <= 0) {
+                return CommandResponse::error("No track matched emotion filter", request.request_id);
+            }
+
+            // track_id -> playlist index
+            const auto& all = controller_->getPlaylistManager().getAllTracks();
+            size_t chosen = static_cast<size_t>(-1);
+            for (size_t i = 0; i < all.size(); i++) {
+                if (all[i].id == track_id) {
+                    chosen = i;
+                    break;
+                }
+            }
+            if (chosen == static_cast<size_t>(-1)) {
+                // 播放列表可能未同步到最新数据库，重新同步再找一次
+                controller_->getPlaylistManager().clear();
+                syncDatabaseTracksToPlaylist();
+                const auto& all2 = controller_->getPlaylistManager().getAllTracks();
+                for (size_t i = 0; i < all2.size(); i++) {
+                    if (all2[i].id == track_id) {
+                        chosen = i;
+                        break;
+                    }
+                }
+            }
+            if (chosen == static_cast<size_t>(-1)) {
+                return CommandResponse::error("Track matched emotion but not in playlist", request.request_id);
+            }
+
+            if (!controller_->playTrack(chosen)) {
+                return CommandResponse::error("Failed to start playback", request.request_id);
+            }
+
+            json result;
+            result["message"] = "Playback started by emotion";
+            result["index"] = chosen;
+            result["current_track"] = controller_->getCurrentTrack().title;
+            result["mood"] = mood;
+            return CommandResponse::success(result, request.request_id);
+        } else if (request.command == "play_by_filter") {
+            // params: {artist?, album?, genre?, shuffle?}
+            if (!library_ || !library_->isOpen()) {
+                return CommandResponse::error("Library not open", request.request_id);
+            }
+
+            std::string artist = request.params.value("artist", "");
+            std::string album = request.params.value("album", "");
+            std::string genre = request.params.value("genre", "");
+            bool shuffle = request.params.value("shuffle", false);
+
+            // 先确保播放列表已同步
+            if (controller_->getPlaylistSize() == 0) {
+                syncDatabaseTracksToPlaylist();
+            }
+
+            int64_t track_id = library_->pickRandomTrackByFilter(artist, album, genre);
+            if (track_id <= 0) {
+                return CommandResponse::error("No track matched filter (artist=" + artist + ", album=" + album + ", genre=" + genre + ")", request.request_id);
+            }
+
+            // 获取匹配曲目的信息
+            TrackInfo track_info;
+            if (!library_->getTrack(track_id, track_info)) {
+                return CommandResponse::error("Failed to get track info for id=" + std::to_string(track_id), request.request_id);
+            }
+
+            // 在播放列表中按 file_path 查找（比按 id 更可靠）
+            const auto& all = controller_->getPlaylistManager().getAllTracks();
+            size_t chosen = static_cast<size_t>(-1);
+            for (size_t i = 0; i < all.size(); i++) {
+                if (all[i].file_path == track_info.file_path) {
+                    chosen = i;
+                    break;
+                }
+            }
+
+            if (chosen == static_cast<size_t>(-1)) {
+                // 播放列表可能未同步，重新同步再找一次
+                controller_->getPlaylistManager().clear();
+                syncDatabaseTracksToPlaylist();
+                const auto& all2 = controller_->getPlaylistManager().getAllTracks();
+                for (size_t i = 0; i < all2.size(); i++) {
+                    if (all2[i].file_path == track_info.file_path) {
+                        chosen = i;
+                        break;
+                    }
+                }
+            }
+
+            if (chosen == static_cast<size_t>(-1)) {
+                return CommandResponse::error("Track matched filter but file_path not in playlist: " + track_info.file_path, request.request_id);
+            }
+
+            if (shuffle) {
+                controller_->getPlaylistManager().shuffle();
+                // 重新在打乱后的列表中查找
+                const auto& shuffled = controller_->getPlaylistManager().getAllTracks();
+                chosen = static_cast<size_t>(-1);
+                for (size_t i = 0; i < shuffled.size(); i++) {
+                    if (shuffled[i].file_path == track_info.file_path) {
+                        chosen = i;
+                        break;
+                    }
+                }
+                if (chosen == static_cast<size_t>(-1)) {
+                    chosen = 0;  // 降级：取第一首
+                }
+            }
+
+            if (!controller_->playTrack(chosen)) {
+                return CommandResponse::error("Failed to start playback", request.request_id);
+            }
+
+            json result;
+            result["message"] = "Playback started by filter";
+            result["index"] = chosen;
+            result["current_track"] = controller_->getCurrentTrack().title;
+            result["artist"] = artist;
+            result["album"] = album;
+            result["genre"] = genre;
+            result["shuffle"] = shuffle;
+            return CommandResponse::success(result, request.request_id);
+        } else if (request.command == "set_play_mode") {
+            // params: {mode: "sequential"|"loop_all"|"random"|"single_loop"}
+            std::string mode_str = request.params.value("mode", "sequential");
+            PlayMode mode = PlayMode::Sequential;
+            if (mode_str == "sequential") {
+                mode = PlayMode::Sequential;
+            } else if (mode_str == "loop_all") {
+                mode = PlayMode::LoopAll;
+            } else if (mode_str == "random") {
+                mode = PlayMode::Random;
+            } else if (mode_str == "single_loop") {
+                mode = PlayMode::SingleLoop;
+            } else {
+                return CommandResponse::error("Unknown play mode: " + mode_str, request.request_id);
+            }
+
+            controller_->setPlayMode(mode);
+
+            json result;
+            result["message"] = "Play mode set";
+            result["mode"] = mode_str;
+            return CommandResponse::success(result, request.request_id);
+        } else if (request.command == "set_loop_count") {
+            // params: {count: int}  (0=无限制)
+            int count = request.params.value("count", 0);
+            if (count < 0) {
+                return CommandResponse::error("Loop count must be >= 0", request.request_id);
+            }
+
+            controller_->getPlaylistManager().setLoopCount(count);
+
+            json result;
+            result["message"] = "Loop count set";
+            result["count"] = count;
+            result["remaining"] = controller_->getPlaylistManager().getRemainingLoops();
+            return CommandResponse::success(result, request.request_id);
         } else {
             return CommandResponse::error("Unknown command: " + request.command, request.request_id);
         }

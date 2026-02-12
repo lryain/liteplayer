@@ -1,0 +1,18 @@
+[Unit]
+Description=Doly Liteplayer Music Service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer
+ExecStart=/home/pi/dev/nora-xiaozhi-dev/3rd/liteplayer/engine/build/music_player_server
+ExecStartPost=/bin/sh -c 'sleep 0.1; for f in /tmp/music_player_cmd.sock /tmp/music_player_event.sock; do [ -e "$f" ] && chmod 0666 "$f" || true; done'
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

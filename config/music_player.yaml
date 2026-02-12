@@ -24,8 +24,9 @@ library:
   
   # 音乐扫描目录
   scan_directories:
-    - "/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal"
+    # - "/home/pi/dev/nora-xiaozhi-dev/assets/sounds/animal"
     - "/home/pi/dev/nora-xiaozhi-dev/assets/sounds/music"
+    - "/home/pi/Music/"
     
   # 文件格式支持
   supported_formats: ["mp3", "m4a", "aac", "wav"]
